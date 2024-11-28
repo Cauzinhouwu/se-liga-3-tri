@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crescimento da Fórmula 1 e WEC</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Referência ao arquivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Crescimento da Fórmula 1 e WEC</h1>
+    <canvas id="myChart"></canvas>
+
+    <h2>Outras Categorias Interessantes</h2>
+    <ul>
+        <li>IndyCar</li>
+        <li>Rally WRC</li>
+        <li>Formula E</li>
+        <li>Nascar</li>
+        <li>DTM (Deutsche Tourenwagen Masters)</li>
+    </ul>
+
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2018', '2019', '2020', '2021', '2022', '2023'],
+                datasets: [
+                    {
+                        label: 'Fórmula 1',
+                        data: [10, 20, 30, 40, 50, 60], // Exemplo de dados
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'WEC',
+                        data: [5, 10, 15, 20, 25, 30], // Exemplo de dados
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+canvas {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: 0; /* Remove a margem esquerda */
+    padding-left: 0; /* Remove o preenchimento à esquerda */
+}
